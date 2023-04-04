@@ -352,6 +352,8 @@ def kochspecial(ncotes,iterations,longueur,epaisseur,inverse,rapport):
     t.exitonclick()
 
 def createsegment(la):
+    """Cette fonction est utilisée pour la fonction polyscreate
+    Permet de prendre une liste d'angles la et de renvoyer cette même liste avec "k" séparant chaque angles (le "k" sera utilisé pour insérer le reste des angles)"""
     i=0
     while la[-1]!="k":
         la.insert(i,"k")
@@ -359,6 +361,8 @@ def createsegment(la):
     return la
 
 def afcreatesegment(i,y):
+    """Cette fonction est utilisée pour la fonction polyscreate
+    Permet de prendre une liste d'angles séparés par "k" y, et un nombre d'itération i pour renvoyer une liste d'angles finaux af contenant les angles à suivre pour la fractale polyscreate"""
     af=["k"]
     while i!=0:
         i-=1
@@ -376,8 +380,38 @@ def afcreatesegment(i,y):
         af.pop(k)
     return af
 
-def polysegmentcreate(langles,divcote,ncotes,iterations,longueur,epaisseur,inverse):
-    assert(sum(langles)==0), "La somme des angles ne fait pas 0, le segment n'est pas un trait droit"
+def polyscreate(langles,divcote,ncotes,iterations,longueur,epaisseur,inverse):
+    """
+    Une fonction qui vas dessiner une fractale en polygone avec la possiblité de créer son propre segment pour chaque coté.
+
+    Parameters
+    ----------
+    langles : list
+        Liste d'angles, une liste contenant tous les angles dans l'ordre que devra suivre le segment. La somme de ces angles doit donner 0 ou un multiple de 360.
+    divcote : float
+        Division des cotés, représente la proportion de la première ligne du segment par rapport à la totalité du segment. Pour une courbe de Koch, ce rapport est égal à 1/3.
+        Ce nombre est compris entre 0 et 1/2.
+    ncotes : int
+        Nombre de cotés du polygone de base.
+    iterations : int
+        Le nombre de fois que les motifs seront présents sur eux mêmes après le polygone inital.
+        On pourrait aussi appeler ce paramètre "degré de précision" de la fractale.
+        Pour des résultats optimaux, il est conseillé de laisser ce paramètre entre 0 et 5.
+        Plus ce paramètre est haut, plus le dessin prendra de temps à ce faire.
+    longueur : int
+        La longueur en pixels d'un coté du polygone initial.
+    epaisseur : int
+        L'épaisseur en pixels du trait, pour des résultats plus précis, il est conseillé de laisser ce paramètre à 0.
+    inverse : bool
+        Permet de définir si les motifs apparaitrons vers le centre du polygone initial, ou vers l'extérieur.
+        False pour vers l'extérieur, True pour vers l'intérieur.
+
+    Returns
+    -------
+    None.
+
+    """
+    assert(sum(langles)%360==0), "La somme des angles ne fait pas un multiple de 360, le segment n'est pas un trait droit"
     t.pensize(epaisseur)
     t.speed("fastest")
     t.penup()
