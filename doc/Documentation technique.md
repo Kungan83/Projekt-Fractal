@@ -1,6 +1,6 @@
 # Documentation Technique
 
-## Les fractales et les fonctions utilisés pour ça
+## Les fractales
 
 Pour chaque fonctions de fractales, le paramètre "t" est rajouté qui représente le canvas tkinter.
 
@@ -232,6 +232,32 @@ On a tenté de faire que cette prévision soit la plus précise possible, mais c
         Le temps en secondes que prendra la fractale poly à se compléter avec les paramètres entrés.
 
 
+Partie de Gabriel :
+
+- **arbrebranche(tourner, distancemin, iteration, regle, epaisseur)**
+
+Une fonction qui va dessiner une fractale en arbre suivant une règle que l'utilisateur peut définir.
+
+    tourner : int 
+        Le curseur tournera de cette valeur lorsqu'il y a une commande + ou -. 
+    distancemin : int
+        La taille des plus petites branches de la fractale. 
+    iteration : int 
+        Le nombre de générations de la fractale.
+    regle : str
+        La fractale suivra ces règles lorsqu'elle se génèrera. Plusieurs règles sont possibles :
+        f : Avancer
+        - : Tourner à gauche
+        + : Tourner à droite
+        [ : Sauvegarder la position actuel
+        ] : Retourner à la position sauvegardée
+        R : Permet d'implémenter la règle dans elle-même pour créer un motif qui se répète.
+    epaisseur : int
+        L'épaisseur du tracé des segments.
+
+## L'interface Tkinter
+
+Partie de Thibaud :
 
 
 
