@@ -157,9 +157,9 @@ Une fonction qui vas dessiner une fractale en polygone avec la possiblité de cr
 
     langles : list
         Liste d'angles, une liste contenant tous les angles dans l'ordre que devra suivre le segment. La somme de ces angles doit donner 0 ou un multiple de 360.
-    divcote : float
-        Division des cotés, représente la proportion de la première ligne du segment par rapport à la totalité du segment. Pour une courbe de Koch, ce rapport est égal à 1/3.
-        Ce nombre est compris entre 0 et 1/2.
+    divcote : int
+        Division des cotés, représente la proportion de la première ligne du segment par rapport à la totalité du segment. Pour une courbe de Koch, ce rapport est égal à 3.
+        Ce nombre supérieur à 1, il représente le dénominateur de la fraction représentant une partie du segment horizontal.
     ncotes : int
         Nombre de cotés du polygone de base.
     iterations : int
