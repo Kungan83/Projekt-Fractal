@@ -260,5 +260,358 @@ Une fonction qui va dessiner une fractale en arbre suivant une règle que l'util
 
 Partie de Thibaud :
 
+- **interface()**
+
+Fonction qui crée l'interface graphique. S'occuppe de la création de la fenêtre principalement.
+
+- **config_interface(fractale_choisie, fen, t, fractale_menu)**
+
+Fonction qui met en place les widgets de Tkinter de la fenêtre "fen".
+
+    fractale_choisie : str
+        variable indiquant la fractale actuellement choisie dans l'OptionMenu de Tkinter.
+    fen :
+        Importe la fenêtre de l'interface graphique.
+    t : 
+        Importe le cadre Turtle de l'interface graphique.
+    fractale_menu :
+        Importe l'OptionMenu de la liste des types de fractales.
+
+- **effacer_tk(t, valider, fractale_menu)**
+
+Fonction pour arrêter la fonction de dessin en cours, supprimer le dessin affiché dans le rawturtle et dégriser le bouton
+    valider pour le rendre à nouveau utilisable.
+
+    t : Raw turtle. C'est le cadre où est dessiné la fractale. Il est importé pour effacer le dessin.
+    valider : C'est le bouton pour valider les entrées de valeurs et démarrer le dessin. Il est importé pour le dégriser
+        et le rendre à nouveau fonctionnel.
+    fractale_menu : C'est l'OptionMenu qui permet de choisir la fractale qu'on veut et ainsi l'interface qui va avec.
+        Importé pour le dégriser.
+
+- **suppression_widget(fen)**
+
+Fonction qui supprime tous widgets sauf les OptionMenu et le cadre
+
+    fen : La fenêtre de l'interface.
+
+- **reset_tk(fen)**
+
+Fonction qui réinitialise les entrées de valeurs.
+
+    fen : Fenêtre de l'interface.
+
+- **iterations_widget(fen, rang)**
+
+Fonction qui crée les widgets d'iterations (l'entrée de valeur + le label)
+
+    fen : TYPE
+        C'est la fenêtre de l'interface.
+    rang : int
+        Indice du Label, utilisé pour positionner correctement les widgets.
+    
+    Renvoie :
+    iterations_tk : TYPE
+        C'est l'Entrée de Valeur. Elle est retournée pour obtenir sa valeur par la suite.
+
+- **epaisseur_widget(fen, rang)**
+
+Fonction qui crée les widgets d'épaisseur (l'entrée de valeur + le label)
+
+    fen : TYPE
+        C'est la fenêtre de l'interface.
+    rang : int
+        Indice du Label, utilisé pour positionner correctement les widgets.
+        
+    Renvoie :
+    epaisseur_tk : TYPE
+        C'est l'Entrée de valeur. Elle est retournée pour obtenir sa valeur par la suite.
+
+- **longueur_widget(fen, rang, texte)**
+
+Fonction qui crée les widgets de longueur (l'entrée de valeur + le label)
+
+    fen : TYPE
+        C'est la fenêtre de l'interface.
+    rang : int
+        Indice du Label, utilisé pour positionner correctement les widgets.
+    texte : str
+        C'est le texte qui va être affiché dans le label.
+        
+    Renvoie :
+    longueur_tk : TYPE
+        C'est l'Entrée de Valeur. Elle est retournée pour obtenir sa valeur par la suite.
+
+- **branches_widget(fen, rang)**
+
+Fonction qui crée les widgets de branches (l'entrée de valeur + le label)
+
+    fen : TYPE
+        C'est la fenêtre de l'interface.
+    rang : int
+        Indice du Label, utilisé pour positionner correctement les widgets.
+        
+    Renvoie :
+    branches_tk : TYPE
+        C'est l'Entrée de Valeur. Elle est retournée pour obtenir sa valeur par la suite.
+
+- **ncotes_widget(fen, rang)**
+
+Fonction qui crée les widgets de ncotes (l'entrée de valeur + le label)
+
+    fen : TYPE
+        C'est la fenêtre de l'interface.
+    rang : int
+        Indice du Label, utilisé pour positionner correctement les widgets.
+        
+    Renvoie :
+    ncotes_tk : TYPE
+        C'est l'Entrée de Valeur. Elle est retournée pour obtenir sa valeur par la suite.
+
+- **rapport_widget(fen, rang, texte)**
+
+Fonction qui crée les widgets de rapport (l'entrée de valeur + le label)
+
+    fen : TYPE
+        C'est la fenêtre de l'interface.
+    rang : int
+        Indice du Label, utilisé pour positionner correctement les widgets.
+        
+    Renvoie :
+    rapport_tk : TYPE
+        C'est l'Entrée de Valeur. Elle est retournée pour obtenir sa valeur par la suite.
+
+- **tree_tk(fen, t, fractale_menu)**
+
+Fonction qui s'occuppe d'afficher les widgets pour la fonction tree().
+    
+    
+    fen : TYPE
+        fenêtre de l'interface.
+    t : TYPE
+        Raw Turtle.
+    fractale_menu : TYPE
+        Option Menu permettant de choisir l'interface en fonction de l'interface. Importée pour la fonction effacer_tk().
+
+- **treea_tk(fen, t, fractale_menu)**
+
+Fonction qui s'occuppe d'afficher les widgets pour la fonction treea().
+    
+    fen : TYPE
+        fenêtre de l'interface.
+    t : TYPE
+        Raw Turtle.
+    fractale_menu : TYPE
+        Option Menu permettant de choisir l'interface en fonction de l'interface. Importée pour la fonction effacer_tk().
+
+- **poly_tk(fen, t, fractale_menu)**
+
+Fonction qui s'occuppe d'afficher les widgets pour la fonction poly().
+   
+    fen : TYPE
+        fenêtre de l'interface.
+    t : TYPE
+        Raw Turtle.
+    fractale_menu : TYPE
+        Option Menu permettant de choisir l'interface en fonction de l'interface. Importée pour la fonction effacer_tk().
+
+- **polyscreate_tk(fen, t, fractale_menu)**
+
+Fonction qui s'occuppe d'afficher les widgets pour la fonction polyscreate().
+    
+    fen : TYPE
+        fenêtre de l'interface.
+    t : TYPE
+        Raw Turtle.
+    fractale_menu : TYPE
+        Option Menu permettant de choisir l'interface en fonction de l'interface. Importée pour la fonction effacer_tk().
+
+- **kochspecial_tk(fen, t, fractale_menu)**
+
+Fonction qui s'occuppe d'afficher les widgets pour la fonction kochspecial().
+    
+    fen : TYPE
+        fenêtre de l'interface.
+    t : TYPE
+        Raw Turtle.
+    fractale_menu : TYPE
+        Option Menu permettant de choisir l'interface en fonction de l'interface. Importée pour la fonction effacer_tk().
+
+- **arbrebranche_tk(fen, t, fractale_menu)**
+
+Fonction qui s'occuppe d'afficher les widgets pour la fonction arbrebranche().
+    
+    fen : TYPE
+        fenêtre de l'interface.
+    t : TYPE
+        Raw Turtle.
+    fractale_menu : TYPE
+        Option Menu permettant de choisir l'interface en fonction de l'interface. Importée pour la fonction effacer_tk().
+
+- **erreur_tree(branches,iterations,longueur,rapport,epaisseur,anglemax,couleur, valider_tree, fractale_menu, t)**
+
+Fonction qui s'occupe de vérifier la conformité des entrées de valeurs pour l'interface correspondant à tree(), de les convertir en variables lisibles pour le programme et d'exécuter la fonction tree() avec ces mêmes valeurs.
+    
+    branches : str
+        C'est ce que l'utilisateur a inscrit pour le nombre de branches.
+    iterations : str
+        C'est ce que l'utilisateur a inscrit pour le nombre de générations.
+    longueur : str
+        C'est ce que l'utilisateur a inscrit pour la longueur de la branche principale.
+    rapport : str
+        C'est ce que l'utilisateur a inscrit pour le changement de la taille des branches.
+    epaisseur : str
+        C'est ce que l'utilisateur a inscrit pour l'épaisseur du trait.
+    anglemax : str
+        C'est ce que l'utilisateur a inscrit pour l'angle maximal que feront les branches.
+    couleur : bool
+        C'est si la case a été cochée ou non pour avoir des couleurs.
+    valider_tree : TYPE
+        Bouton valider importé pour le dégriser si une erreur est commise.
+    fractale_menu : TYPE
+        OptionMenu des types de fractales importée pour le dégriser si une erreur est commise.
+    t : TYPE
+        Raw turtle importé pour la fonction tree().
+
+- **erreur_treea(branches, iterations, longueur, rapport, epaisseur, angles, couleur, valider_treea, fractale_menu, t)**
+
+Fonction qui s'occupe de vérifier la conformité des entrées de valeurs pour l'interface correspondant à treea(), de les convertir en variables lisibles pour le programme et d'exécuter la fonction treea() avec ces mêmes valeurs.
+
+    branches : str
+        C'est ce que l'utilisateur a inscrit pour le nombre de branches.
+    iterations : str
+        C'est ce que l'utilisateur a inscrit pour le nombre de générations.
+    longueur : str
+        C'est ce que l'utilisateur a inscrit pour la longueur de la branche principale.
+    rapport : str
+        C'est ce que l'utilisateur a inscrit pour le changement de la taille des branches.
+    epaisseur : str
+        C'est ce que l'utilisateur a inscrit pour l'épaisseur du trait.
+    angles : str
+        C'est lees angles entrés par l'utilisateur et séparés par des virgules.
+    couleur : bool
+        C'est si la case a été cochée ou non pour avoir des couleurs.
+    valider_treea : TYPE
+        Bouton valider importé pour le dégriser si une erreur est commise.
+    fractale_menu : TYPE
+        OptionMenu des types de fractales importée pour le dégriser si une erreur est commise.
+    t : TYPE
+        Raw turtle importé pour la fonction treea().
+
+- **erreur_poly(ncotes, ncotemotif, iterations, longueur, epaisseur, inverse, valider_poly, fractale_menu, t)**
+
+Fonction qui s'occupe de vérifier la conformité des entrées de valeurs pour l'interface correspondant à poly(), de les convertir en variables lisibles pour le programme et d'exécuter la fonction poly() avec ces mêmes valeurs.
+    
+    ncotes : str
+        C'est le nombre de côtés inscrit par l'utilisateur.
+    ncotemotif : str
+        C'est le nombre de côtés des polygones des motifs inscrit par l'utilisateur.
+    iterations : str
+        C'est le nombre de fois que les polygones de motifs se reproduiront inscrit par l'utilisateur.
+    longueur : str
+        C'est la longueur d'un côté du polygone principal inscrit par l'utilisateur.
+    epaisseur : str
+        C'est l'épaisseur du tracé inscrit par l'utilisateur.
+    inverse : bool
+        C'est si la case inverse (les motifs se dessineront vers l'extérieur ou l'intérieur).
+    valider_poly : TYPE
+        Bouton valider importé pour le dégriser si une erreur est commise.
+    fractale_menu : TYPE
+        OptionMenu des types de fractales importée pour le dégriser si une erreur est commise.
+    t : TYPE
+        Raw turtle importé pour la fonction poly().
+
+- **erreur_polyscreate(langles, divcote, ncotes, iterations, longueur, epaisseur, inverse, valider_polyscreate, fractale_menu, t)**
+
+Fonction qui s'occupe de vérifier la conformité des entrées de valeurs pour l'interface correspondant à polyscreate(), de les convertir en variables lisibles pour le programme et d'exécuter la fonction polyscreate() avec ces mêmes valeurs.
+    
+    langles : str
+        Ce sont les angles que l'utilisateur a inscrit pour le dessin du segment.
+    divcote : str
+        C'est par ce nombre que sera divisé chaque côté du polygone.
+    ncotes : str
+        C'est le nombre de côtés inscrit par l'utilisateur.
+    iterations : str
+        C'est le nombre de fois que les polygones de motifs se reproduiront inscrit par l'utilisateur.
+    longueur : str
+        C'est la longueur d'un côté du polygone principal inscrit par l'utilisateur.
+    epaisseur : str
+        C'est l'épaisseur du tracé inscrit par l'utilisateur.
+    inverse : bool
+        C'est si la case inverse (les motifs se dessineront vers l'extérieur ou l'intérieur).
+    valider_polyscreate : TYPE
+        Bouton valider importé pour le dégriser si une erreur est commise.
+    fractale_menu : TYPE
+        OptionMenu des types de fractales importée pour le dégriser si une erreur est commise.
+    t : TYPE
+        Raw turtle importé pour la fonction polyscreate().
+
+- **erreur_kochspecial(ncotes,iterations,longueur,epaisseur,inverse,rapport, valider_kochspecial, fractale_menu, t)**
+
+Fonction qui s'occupe de vérifier la conformité des entrées de valeurs pour l'interface correspondant à kochspecial(), de les convertir en variables lisibles pour le programme et d'exécuter la fonction kochspecial() avec ces mêmes valeurs.
+    
+    ncotes : str
+        C'est le nombre de côtés inscrit par l'utilisateur.
+    iterations : str
+        C'est le nombre de fois que les polygones de motifs se reproduiront inscrit par l'utilisateur.
+    longueur : str
+        C'est la longueur d'un côté du polygone principal inscrit par l'utilisateur.
+    epaisseur : str
+        C'est l'épaisseur du tracé inscrit par l'utilisateur.
+    inverse : bool
+        C'est si la case inverse (les motifs se dessineront vers l'extérieur ou l'intérieur).
+    rapport : str
+        Ce rapport représente la longueur par rapport à la longueur du segment d'un des deux segments autour du motif.
+    valider_kochspecial : TYPE
+        Bouton valider importé pour le dégriser si une erreur est commise.
+    fractale_menu : TYPE
+        OptionMenu des types de fractales importée pour le dégriser si une erreur est commise.
+    t : TYPE
+        Raw turtle importé pour la fonction kochspecial().
+
+- **erreur_arbrebranche(tourner, distancemin, iterations, regle, epaisseur, valider_arbrebranche, fractale_menu, t)**
+
+Fonction qui s'occupe de vérifier la conformité des entrées de valeurs pour l'interface correspondant à arbrebranche(), de les convertir en variables lisibles pour le programme et d'exécuter la fonction arbrebranche() avec ces mêmes valeurs.
+    
+    tourner : str
+        A chaque rotation imposée dans règle, tourner représente l'angle qui sera effectué par cette rotation.
+    distancemin : str
+        C'est la longueur du plus petit segment qui sera dessiné.
+    iterations : str
+        C'est le nombre de fois que les motifs se reproduiront inscrit par l'utilisateur.
+    regle : str
+        C'est la règle que l'utilisateur impose à la fractale.
+    epaisseur : str
+        C'est l'épaisseur du tracé inscrit par l'utilisateur.
+    valider_arbrebranche : TYPE
+        Bouton valider importé pour le dégriser si une erreur est commise.
+    fractale_menu : TYPE
+        OptionMenu des types de fractales importée pour le dégriser si une erreur est commise.
+    t : TYPE
+        Raw turtle importé pour la fonction arbrebranche().
+
+- **preset_tree(preset_choisi, branches_tk,iterations_tk,longueur_tk,rapport_tk,epaisseur_tk,anglemax_tk,couleur_case, fen)**
+
+C'est la fonction qui propose des presets pour la fractale arbre.
+    
+    preset_choisi : str
+        C'est le preset choisi par l'utilisateur.
+    branches_tk : TYPE
+        C'est l'entrée de valeur des branches.
+    iterations_tk : TYPE
+        C'est l'entrée de valeur des générations.
+    longueur_tk : TYPE
+        C'est l'entrée de valeur de la longueur.
+    rapport_tk : TYPE
+        C'est l'entrée de valeur du rapport.
+    epaisseur_tk : TYPE
+        C'est l'entrée de valeur de l'épaisseur.
+    anglemax_tk : TYPE
+        C'est l'entrée de valeur de l'angle maximal.
+    couleur_case : TYPE
+        C'est la case des couleurs.
+    fen : TYPE
+        Fenêtre de l'interface.
+
+
 
 
