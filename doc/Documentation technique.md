@@ -176,6 +176,7 @@ Une fonction qui vas dessiner une fractale en polygone avec la possiblité de cr
         False pour vers l'extérieur, True pour vers l'intérieur.
 
 ## Fonctions de prévision de temps
+***Attention, ces fonctions n'ont jamais étés implémentés dans l'interface finale, elles ne sont utilisables uniquement grâce à une console python***
 
 ***Attention, seul les fractales tree, trea, poly, et kochspecial peuvent utiliser les fonctions de prévision de temps.***
 
