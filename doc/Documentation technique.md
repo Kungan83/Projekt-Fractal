@@ -612,6 +612,133 @@ C'est la fonction qui propose des presets pour la fractale arbre.
     fen : TYPE
         Fenêtre de l'interface.
 
+- **preset_treea(preset_choisi, branches_tk,iterations_tk,longueur_tk,rapport_tk,epaisseur_tk,angles_tk,couleur_case, fen)**
 
+C'est la fonction qui propose des presets pour la fractale arbre avec angles.
+    
+    preset_choisi : str
+        C'est le preset choisi par l'utilisateur.
+    branches_tk : TYPE
+        C'est l'entrée de valeur des branches.
+    iterations_tk : TYPE
+        C'est l'entrée de valeur des générations.
+    longueur_tk : TYPE
+        C'est l'entrée de valeur de la longueur.
+    rapport_tk : TYPE
+        C'est l'entrée de valeur du rapport.
+    epaisseur_tk : TYPE
+        C'est l'entrée de valeur de l'épaisseur.
+    angles_tk : TYPE
+        C'est l'entrée de valeur des angles.
+    couleur_case : TYPE
+        C'est la case des couleurs.
+    fen : TYPE
+        Fenêtre de l'interface.
 
+- **preset_poly(preset_choisi,ncotes_tk,ncotemotif_tk,iterations_tk,longueur_tk,epaisseur_tk, inverse_case, fen)**
 
+C'est la fonction qui propose des presets pour la fractale polygone.
+
+    preset_choisi : str
+        C'est le preset choisi par l'utilisateur.
+    ncotes_tk : TYPE
+        C'est l'entrée de valeur du nombre de côtés.
+    ncotemotif_tk : TYPE
+        C'est l'entrée de valeur du nombre de côtés des polygones des motifs
+    iterations_tk : TYPE
+        C'est l'entrée de valeur des générations.
+    longueur_tk : TYPE
+        C'est l'entrée de valeur de la longueur.
+    epaisseur_tk : TYPE
+        C'est l'entrée de valeur de l'épaisseur.
+    inverse_case : TYPE
+        C'est la case des motifs inversés.
+    fen : TYPE
+        fenêtre de l'interface.
+
+- **preset_polyscreate(preset_choisi,langles_tk,divcote_tk,ncotes_tk,iterations_tk,longueur_tk,epaisseur_tk,inverse_case, fen)**
+
+C'est la fonction qui propose des presets pour la fractale polygone avec motif.
+
+    preset_choisi : str
+        C'est le preset choisi par l'utilisateur.
+    langles_tk : TYPE
+        C'est l'entrée de valeur des angles du segment.
+    divcotes_tk : TYPE
+        C'est l'entrée de valeur de la division du segment
+    ncotes_tk : TYPE
+        C'est l'entrée de valeur du nombre de côtés.
+    iterations_tk : TYPE
+        C'est l'entrée de valeur des générations.
+    longueur_tk : TYPE
+        C'est l'entrée de valeur de la longueur.
+    epaisseur_tk : TYPE
+        C'est l'entrée de valeur de l'épaisseur.
+    inverse_case : TYPE
+        C'est la case des motifs inversés.
+    fen : TYPE
+        fenêtre de l'interface.
+
+- **preset_kochspecial(preset_choisi,ncotes_tk,iterations_tk,longueur_tk,epaisseur_tk,inverse_case,rapport_tk, fen)**
+
+C'est la fonction qui propose des presets pour la fractale kochspecial.
+    
+    preset_choisi : str
+        C'est le preset choisi par l'utilisateur.
+    ncotes_tk : TYPE
+        C'est l'entrée de valeur du nombre de côtés.
+    iterations_tk : TYPE
+        C'est l'entrée de valeur des générations.
+    longueur_tk : TYPE
+        C'est l'entrée de valeur de la longueur.
+    epaisseur_tk : TYPE
+        C'est l'entrée de valeur de l'épaisseur.
+    inverse_case : TYPE
+        C'est la case des motifs inversés.
+    rapport_tk : TYPE
+        C'est l'entrée de valeur des proportions du segment.
+    fen : TYPE
+        c'est la fenêtre de l'interface.
+
+- **preset_arbrebranche(preset_choisi,tourner_tk,distancemin_tk,iteration_tk,regle_tk,epaisseur_tk, fen)**
+
+C'est la fonction qui propose des presets pour la fractale arbrebranche.
+
+    preset_choisi : str
+       C'est le preset choisi par l'utilisateur.
+    tourner_tk : TYPE
+        C'est l'entrée de valeur de l'angle.
+    distancemin_tk : TYPE
+        C'est l'entrée de valeur de la distance minimale.
+    iteration_tk : TYPE
+        C'est l'entrée de valeur du nombre de générations.
+    regle_tk : TYPE
+        C'est l'entrée de valeur de la règle régissant la fractale.
+    epaisseur_tk : TYPE
+        C'est l'entrée de valeur de l'épaisseur du tracé.
+    fen : TYPE
+        la fenêtre de l'interface.
+
+- **aide_tree()**
+
+Fonction qui ouvre une fenêtre supérieure pour donner des explications sur la fractale d'arbre et ses paramètres.
+
+- **aide_treea()**
+
+Fonction qui ouvre une fenêtre supérieure pour donner des explications sur la fractale d'arbre avec angles et ses paramètres.
+
+- **aide_poly()**
+
+Fonction qui ouvre une fenêtre supérieure pour donner des explications sur la fractale de polygone et ses paramètres.
+
+- **aide_polyscreate()**
+
+Fonction qui ouvre une fenêtre supérieure pour donner des explications sur la fractale de polygone avec motifs et ses paramètres.
+
+- **aide_kochspecial()**
+
+Fonction qui ouvre une fenêtre supérieure pour donner des explications sur la fractale de flocon de koch et ses paramètres.
+
+- **aide_arbrebranche()**
+
+Fonction qui ouvre une fenêtre supérieure pour donner des explications sur la fractale d'arbre réglable et ses paramètres.
